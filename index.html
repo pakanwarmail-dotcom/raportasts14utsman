@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Perkembangan Murid Kelas 4 Utsman</title>
+<style>
+:root{box-sizing:border-box;--bg:#0b1f33;--p:#0f3d5e;--t:#14b8a6;--a:#f5b335;--r:#ef6a5b;--w:#f4f7fa;--card:#fff;--ink:#12283c;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:#06141f;font-family:'Segoe UI',Roboto,Arial,sans-serif;overflow:hidden}
+#wrap{position:relative;width:100%;height:100%}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:0 0;background:var(--bg);overflow:hidden;color:var(--w)}
+.page{position:absolute;inset:0;display:none}.page.on{display:block}
+.geo{position:absolute}
+/* cover */
+.tri1{right:0;top:0;width:0;height:0;border-left:520px solid transparent;border-top:720px solid var(--p)}
+.tri2{left:0;bottom:0;width:0;height:0;border-right:380px solid transparent;border-bottom:300px solid var(--t);opacity:.9}
+.sq{width:90px;height:90px;background:var(--a);transform:rotate(45deg);right:120px;top:90px}
+.circ{width:200px;height:200px;border-radius:50%;border:26px solid var(--t);right:170px;bottom:70px}
+.bar{left:90px;top:150px;width:90px;height:10px;background:var(--a)}
+#cover h1{position:absolute;left:90px;top:180px;width:760px;font-size:68px;line-height:1.05;font-weight:800;letter-spacing:1px}
+#cover h2{position:absolute;left:90px;top:400px;font-size:28px;font-weight:600;color:var(--a);letter-spacing:3px}
+#cover .sch{position:absolute;left:90px;top:100px;font-size:15px;letter-spacing:4px;color:#9fc3dc}
+.ctl{position:absolute;left:90px;top:470px;display:flex;gap:16px;align-items:center}
+select,.btn{font:600 18px inherit;font-family:inherit;border:0;border-radius:0;padding:16px 20px;cursor:pointer}
+select{width:380px;background:var(--w);color:var(--ink);border-left:8px solid var(--t)}
+.btn{background:var(--a);color:#1b1b1b;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%);padding-right:36px}
+.btn:hover{background:#ffc95a}.btn.alt{background:var(--t)}
+/* detail */
+.head{position:absolute;left:0;top:0;right:0;height:110px;background:var(--p);overflow:hidden}
+.head:after{content:"";position:absolute;right:0;top:0;border-left:140px solid transparent;border-top:110px solid var(--t)}
+.head .s{position:absolute;left:40px;top:14px;font-size:14px;letter-spacing:4px;color:#9fc3dc}
+.head .m{position:absolute;left:40px;top:34px;font-size:30px;font-weight:800}
+.head .n{position:absolute;left:40px;top:76px;font-size:20px;color:var(--a);font-weight:700}
+.head .btn{position:absolute;right:50px;top:30px;z-index:2;padding:12px 34px 12px 20px;font-size:15px}
+.body{position:absolute;left:0;right:0;top:110px;bottom:0;padding:16px 40px;overflow-y:auto}
+.grid{display:grid;grid-template-columns:1.9fr 1fr;gap:16px}
+.card{background:var(--card);color:var(--ink);padding:14px 16px;border-top:6px solid var(--t)}
+.card h3{font-size:14px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;color:var(--p)}
+.com{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.com .card p{font-size:14px;line-height:1.5}
+.c1{border-color:var(--t)}.c2{border-color:var(--r)}.c3{border-color:var(--a)}
+.rank{font-size:46px;font-weight:800;color:var(--p);line-height:1}
+.leg{font-size:12px;display:flex;gap:14px;margin-top:2px}.leg i{display:inline-block;width:10px;height:10px;margin-right:4px}
+/* rekap */
+.tw{position:absolute;left:30px;right:30px;top:120px;bottom:20px;overflow:auto;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:12px;color:var(--ink);text-align:center}
+th{position:sticky;top:0;background:var(--p);color:#fff;padding:8px 4px;z-index:1}
+td{padding:6px 4px;border-bottom:1px solid #e1e8ee}
+td.l{text-align:left;white-space:nowrap;padding-left:10px}
+tr:nth-child(even) td{background:#f1f6f9}
+tr.avg td{background:var(--a)!important;font-weight:800}
+td.lo{color:#c0392b;font-weight:700}td.hi{color:#0d8a7c;font-weight:700}
+</style></head><body>
+<div id="wrap"><div id="stage">
+
+<section id="cover" class="page on">
+ <div class="geo tri1"></div><div class="geo tri2"></div><div class="geo sq"></div><div class="geo circ"></div><div class="geo bar"></div>
+ <div class="sch">SD ISLAM AL AZHAR 28 SOLO BARU</div>
+ <h1>PERKEMBANGAN MURID KELAS 4 UTSMAN</h1>
+ <h2>ASTS 1 - TP 2026/2027</h2>
+ <div class="ctl">
+  <select id="sel"><option value="">Pilih nama murid…</option></select>
+  <button class="btn alt" onclick="show('rekap')">Lihat Rekapan</button>
+ </div>
+</section>
+
+<section id="detail" class="page">
+ <div class="head"><div class="s">SD ISLAM AL AZHAR 28 SOLO BARU</div><div class="m">PERKEMBANGAN MURID</div><div class="n" id="nm"></div>
+  <button class="btn" onclick="show('cover')">Kembali</button></div>
+ <div class="body">
+  <div class="grid">
+   <div class="card"><h3>Nilai Semua Mata Pelajaran</h3>
+    <div class="leg"><span><i style="background:var(--t)"></i>Nilai Ananda</span><span><i style="background:var(--a)"></i>Rata-rata kelas</span></div>
+    <svg id="c1" viewBox="0 0 760 250" width="100%"></svg></div>
+   <div class="card"><h3>Rata-rata Ananda vs Kelas</h3><svg id="c2" viewBox="0 0 340 250" width="100%"></svg></div>
+  </div>
+  <div class="com">
+   <div class="card c1"><h3>Hal Baik dari Ananda</h3><p id="good"></p></div>
+   <div class="card c2"><h3>Perlu Pendampingan</h3><p id="need"></p></div>
+   <div class="card c3"><h3>Peringkat di Kelas</h3><div class="rank" id="rk"></div><p id="rkt" style="margin-top:6px"></p></div>
+  </div>
+ </div>
+</section>
+
+<section id="rekap" class="page">
+ <div class="head"><div class="s">SD ISLAM AL AZHAR 28 SOLO BARU</div><div class="m">REKAP NILAI RAPORT</div><div class="n">Kelas 4 Utsman · ASTS 1 · TP 2026/2027</div>
+  <button class="btn" onclick="show('cover')">Kembali</button></div>
+ <div class="tw"><table id="tb"></table></div>
+</section>
+
+</div></div>
+<script>
+const SUB=["Pendidikan Al Quran","Pendidikan Agama Islam","Pendidikan Pancasila","Bahasa Indonesia","Matematika","IPAS","PJOK","Seni Rupa","Seni Musik","Bahasa Inggris","Mathematics","Science","B. Jawa","TIK","Tamyiz"];
+const SH=["Al Quran","PAI","Pancasila","B.Indo","MTK","IPAS","PJOK","S.Rupa","S.Musik","B.Ing","Math","Science","B.Jawa","TIK","Tamyiz"];
+const D=[
+["Achmad Sakha Maulana Daulay","4228-2324238",[79,78,74,66,75,72,76,77,78,74,75,67,78,80,80],16],
+["Arrayyan Richie Hero Ariansson","4228-2324251",[78,80,79,78,72,79,76,72,79,78,80,80,80,80,80],2],
+["Astaseni Bening Locita","4228-2324257",[77,76,75,75,71,77,77,78,79,77,76,76,73,80,80],10],
+["Atikah Ayuning Tyas","4228-2324260",[80,79,77,78,79,79,76,76,79,75,76,71,79,80,80],4],
+["Azkayra Banafsha Rabbani Maezurra","4228-2324263",[79,78,76,77,74,74,76,76,79,75,78,69,75,77,80],12],
+["Azwan Basyar Athallah","4228-2324266",[80,74,67,61,67,74,77,68,79,71,65,67,69,75,76],24],
+["Chelsea Naira Emeralda Santosa","4228-2526602",[75,79,75,73,77,76,76,77,79,77,77,71,80,80,79],8],
+["Daffin Althaffarizy Dwiantoro","4228-2324270",[78,73,73,73,61,72,76,71,77,78,74,76,72,74,69],20],
+["Fathiya Arsyfa Ramadhani","4228-2324274",[78,76,71,65,60,72,77,75,79,75,66,70,65,77,79],22],
+["Gibran Wafa Ramadhan","4228-2324277",[75,74,75,74,72,74,76,74,78,77,78,77,64,77,77],17],
+["Kenzi Shiraz","4228-2324341",[78,80,78,76,72,78,77,74,77,77,77,76,79,78,77],7],
+["Khayla Shintya Azahra","4228-2324289",[76,76,75,66,75,72,76,78,79,74,75,66,77,77,78],18],
+["Mikhayla Azzahra Putri","4228-2324297",[79,79,74,69,76,75,76,77,79,78,76,73,80,77,80],10],
+["Naureen Hamzah","4228-2324310",[80,78,75,65,78,74,76,75,79,78,71,74,76,77,80],13],
+["Rafan Mumtaaz Hisyam Hadi","4228-2526607",[75,70,69,70,58,68,76,71,78,75,67,62,60,75,76],25],
+["Rafasha Malik Elzhahir","4228-2324316",[73,64,72,65,59,72,77,74,79,70,66,64,61,75,70],27],
+["Rajendra Raskha Risantyo","4228-2324317",[80,78,79,75,73,77,77,76,77,77,79,79,80,80,69],6],
+["Rayyan Hakim Wibowo","4228-2324322",[80,78,80,73,80,78,77,74,78,79,80,77,80,76,71],5],
+["Razi Danish Pradipta","4228-2324323",[79,80,78,78,79,80,77,71,79,78,79,80,80,80,80],1],
+["Safea Andreana","4228-2324325",[80,77,77,75,73,78,76,75,79,76,75,73,80,78,80],9],
+["Sean Adinata Pradipta","4228-2324326",[78,67,70,66,63,72,76,64,78,70,64,65,73,74,70],26],
+["Selena Ayudia Inara","4228-2324327",[80,80,75,78,79,78,77,78,79,78,78,74,74,80,80],3],
+["Shakila Reiska Kinanthi","4228-2324329",[78,78,75,69,73,76,77,76,79,75,76,73,77,76,77],15],
+["Shanaira Jennar Allyanugraha","4228-2324330",[79,77,73,69,71,77,76,76,78,78,75,76,73,77,80],13],
+["Syafira Afsheen Meysha","4228-2425475",[78,70,71,68,73,75,77,76,77,71,70,64,73,77,80],19],
+["Tarendra Raj Cahlia Selwom","4228-2324333",[72,71,71,61,75,69,76,74,78,74,77,68,63,80,72],23],
+["Theuku Muhammad Kenwibowo","4228-2324334",[77,66,74,69,68,74,77,74,77,75,74,67,71,77,73],21]];
+const sum=s=>s.reduce((a,b)=>a+b,0), avg=s=>sum(s)/s.length;
+const f=n=>n.toFixed(2).replace('.',',');
+const CA=SUB.map((_,i)=>D.reduce((a,d)=>a+d[2][i],0)/D.length);
+const CAV=D.reduce((a,d)=>a+avg(d[2]),0)/D.length;
+const $=id=>document.getElementById(id);
+const sel=$('sel');
+D.forEach((d,i)=>sel.add(new Option(d[0],i)));
+sel.onchange=()=>{if(sel.value!==''){render(+sel.value);show('detail')}};
+function show(p){document.querySelectorAll('.page').forEach(e=>e.classList.toggle('on',e.id===p));if(p==='cover')sel.value='';$('detail').querySelector('.body').scrollTop=0}
+function fit(){const k=Math.min(innerWidth/1280,innerHeight/720);const s=$('stage').style;s.transform=`scale(${k}) translate(-50%,-50%)`;s.left='50%';s.top='50%';s.transformOrigin='0 0'}
+addEventListener('resize',fit);fit();
+function render(i){
+ const [n,nis,sc,rk]=D[i];const av=avg(sc);
+ $('nm').textContent=n+" · "+nis;
+ // chart 1
+ const lo=50,hi=100,H=190,top=16,bw=26,gap=(760-40)/15;
+ const y=v=>top+H-(v-lo)/(hi-lo)*H;
+ let s='';
+ [60,70,80,90,100].forEach(v=>s+=`<line x1="30" x2="760" y1="${y(v)}" y2="${y(v)}" stroke="#dde6ee"/><text x="26" y="${y(v)+4}" font-size="10" text-anchor="end" fill="#6a8094">${v}</text>`);
+ sc.forEach((v,k)=>{const x=40+k*gap+(gap-bw)/2;const c=v<CA[k]-3?'#ef6a5b':'#14b8a6';
+  s+=`<rect x="${x}" y="${y(v)}" width="${bw}" height="${top+H-y(v)}" fill="${c}"/>`+
+  `<rect x="${x-3}" y="${y(CA[k])-2}" width="${bw+6}" height="4" fill="#f5b335"/>`+
+  `<text x="${x+bw/2}" y="${y(v)-4}" font-size="11" font-weight="700" text-anchor="middle" fill="#12283c">${v}</text>`+
+  `<text x="${x+bw/2}" y="${top+H+16}" font-size="10" text-anchor="middle" fill="#12283c">${SH[k]}</text>`});
+ $('c1').innerHTML=s;
+ // chart 2
+ const w=v=>v/100*280;
+ $('c2').innerHTML=`<text x="10" y="40" font-size="13" fill="#12283c">Rata-rata Ananda</text><rect x="10" y="48" width="${w(av)}" height="34" fill="#14b8a6"/><text x="${w(av)+16}" y="72" font-size="16" font-weight="800" fill="#12283c">${f(av)}</text>
+ <text x="10" y="120" font-size="13" fill="#12283c">Rata-rata Kelas</text><rect x="10" y="128" width="${w(CAV)}" height="34" fill="#f5b335"/><text x="${w(CAV)+16}" y="152" font-size="16" font-weight="800" fill="#12283c">${f(CAV)}</text>
+ <polygon points="10,190 40,190 25,172" fill="${av>=CAV?'#14b8a6':'#ef6a5b'}"/><text x="50" y="188" font-size="13" font-weight="700" fill="#12283c">${av>=CAV?'Di atas':'Di bawah'} rata-rata kelas (${av>=CAV?'+':''}${f(av-CAV)})</text>`;
+ // komentar
+ const idx=SUB.map((_,k)=>k);
+ const g=[...idx].sort((a,b)=>sc[b]-sc[a]||(sc[b]-CA[b])-(sc[a]-CA[a])).slice(0,3);
+ const nd=[...idx].sort((a,b)=>(sc[a]-CA[a])-(sc[b]-CA[b])).slice(0,3);
+ const nm=k=>`${SUB[k]} (${sc[k]})`;
+ const up=idx.filter(k=>sc[k]>CA[k]).length;
+ $('good').textContent=`Ananda menunjukkan capaian terbaik pada ${nm(g[0])}, ${nm(g[1])}, dan ${nm(g[2])}. Nilai ananda berada di atas rata-rata kelas pada ${up} dari 15 mata pelajaran. Pertahankan semangat belajarnya!`;
+ $('need').textContent=`Ananda perlu pendampingan dan penguatan pada ${nm(nd[0])}, ${nm(nd[1])}, dan ${nm(nd[2])}, yang selisihnya paling jauh dari rata-rata kelas. Mohon dukungan latihan rutin di rumah.`;
+ $('rk').textContent=`#${rk} / ${D.length}`;
+ $('rkt').textContent=`Peringkat berdasarkan rata-rata nilai ${f(av)} (rata-rata kelas ${f(CAV)}).`;
+}
+// rekap
+(function(){
+ let h='<tr><th>No</th><th>Nama Siswa</th><th>NIS</th>'+SH.map((x,i)=>`<th title="${SUB[i]}">${x}</th>`).join('')+'<th>Jumlah</th><th>Rata-rata</th><th>Rank</th></tr>';
+ D.forEach((d,i)=>{h+=`<tr><td>${i+1}</td><td class="l">${d[0]}</td><td>${d[1]}</td>`+d[2].map((v,k)=>`<td class="${v<CA[k]-5?'lo':v>CA[k]+4?'hi':''}">${v}</td>`).join('')+`<td>${sum(d[2])}</td><td><b>${f(avg(d[2]))}</b></td><td>${d[3]}</td></tr>`});
+ h+=`<tr class="avg"><td colspan="3">Rata-rata Kelas</td>`+CA.map(v=>`<td>${v.toFixed(1).replace('.',',')}</td>`).join('')+`<td></td><td>${f(CAV)}</td><td></td></tr>`;
+ $('tb').innerHTML=h;
+})();
+</script></body></html>
